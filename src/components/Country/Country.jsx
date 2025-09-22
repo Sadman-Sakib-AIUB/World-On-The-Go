@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Country.css'
 
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountries }) => {
 //   console.log(country.name.common);
 
 const [visited , setVisited] = useState(false);
@@ -16,7 +16,8 @@ const handleClick = () => {
   //   setVisited(true)
   // }
 
-  setVisited(visited? false: true)
+  setVisited(visited? false: true);
+  handleVisitedCountries(country);
 
   // setVisited(!visited);
 }
